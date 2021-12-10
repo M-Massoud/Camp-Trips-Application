@@ -24,7 +24,7 @@ const upload = multer({
 });
 
 
-const mbxGeocoding = require("@mapbox/mapbox-sdk/services");
+const mbxGeocoding = require('@mapbox/mapbox-sdk/services/g');
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({
     accessToken: mapBoxToken
@@ -37,7 +37,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require("helmet");
 
 // 'mongodb://localhost:27017/yelpcampdb'
-process.env.dbUrl
+// process.env.dbUrl
 
 mongoose.connect(process.env.dbUrl, {
         useNewUrlParser: true,
