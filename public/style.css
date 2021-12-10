@@ -1,0 +1,20 @@
+body {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+footer {
+    background-color: burlywood;
+    text-align: center;
+}
+
+.camp-img {
+    max-height: 360px;
+}
+
+.campground-img {
+    height: 320px;
+
+    width: 100%;
+    max-width: auto;
+}

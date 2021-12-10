@@ -1,0 +1,91 @@
+body {
+    height: 100vh;
+    max-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../camp-img5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+h1 {
+    align-self: center;
+    justify-self: center;
+}
+
+
+.mobile-header-customization {
+    height: 10vh;
+}
+
+.main-content {
+    height: 90vh;
+    max-height: 90vh;
+}
+
+
+@media (max-width: 991px) {
+    .mobile-header-customization {
+        background-color: black;
+        height: auto;
+    }
+
+    .main-content {
+        max-height: 55vh;
+    }
+}
+
+.button1 {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px 22px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    transition: transform 200ms, background 200ms;
+    text-decoration: none;
+}
+
+.button1:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+
+}
+
+
+.button2 {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 14px 22px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    transition: transform 200ms,
+        background 200ms;
+    background: transparent;
+    color: #000000;
+    box-shadow: 0 0 0 3px #000000 inset;
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.button2:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+
+.home-links {
+    font-weight: 500;
+}
+
+.campground-img {
+    max-width: 20px !important;
+}

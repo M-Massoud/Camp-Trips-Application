@@ -1,0 +1,98 @@
+<%- include('partials/header.ejs') %>
+
+<!-- <a href=" http://localhost:3000/home ">add Camp</a> -->
+
+
+<h1 class="text-center">Add New Camp</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            <form action="/campgrounds" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+
+                <div>
+                    <label class="form-label" for="campname">Title</label>
+                    <input class="form-control mb-2" type="text" name="campnameinput" id="campname" required>
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="camplocation">location</label>
+                    <input class="form-control" type="text" name="camplocationinput" id="camplocation" required>
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label" for="image-field">Upload Image</label>
+                    <input class="" id="image-field" name="image" type="file">
+                </div>
+
+
+
+                <div>
+                    <label class="form-label" for="campprice">Price</label></div>
+
+                <div class="input-group mb-3">
+
+                    <span class="input-group-text">$</span>
+                    <input type="number" id="campprice" class="form-control" name="campprice" required
+                        aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div>
+                    <label for="camptextarea" class="form-label">Description</label>
+                    <textarea class="form-control" id="camptextarea" rows="3" name="campdescription"
+                        required></textarea>
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+                <button class="btn btn-primary my-3">Add New</button>
+
+            </form>
+
+            <a href="/campgrounds">All Camps</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- the javascript validation from bootstrap -->
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+<%- include('partials/footer.ejs') %>

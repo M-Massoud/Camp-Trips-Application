@@ -1,0 +1,72 @@
+<%- include('partials/header.ejs') %>
+
+<!-- <a href=" http://localhost:3000/home ">add Camp</a> -->
+
+
+<h1 class="text-center"> Login </h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            <%- include('partials/successmsg.ejs') %>
+            <%- include('partials/errormsg.ejs') %>
+
+
+            <form action="/login" method="post" class="needs-validation" novalidate>
+
+                <div>
+                    <label class="form-label" for="username">User name</label>
+                    <input class="form-control mb-2" type="text" name="username" id="username" required>
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label" for="userpassword">Password</label>
+                    <input class="form-control" type="password" name="password" id="userpassword" required>
+                    <div class="valid-feedback mb-2">
+                        Looks good!
+                    </div>
+                </div>
+
+                <button class="btn btn-success my-3">Login</button>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- the javascript validation from bootstrap -->
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+<%- include('partials/footer.ejs') %>

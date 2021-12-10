@@ -1,0 +1,58 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 ">
+
+
+            <h1>Edit Campground</h1>
+
+            <!-- <a href=" http://localhost:3000/home ">add Camp</a> -->
+
+            <a href="/campgrounds">all Camps</a>
+
+
+            <form action="/campgrounds/<%=showCampground._id%>?_method=PUT" method="post">
+
+                <div>
+                    <label class="form-label" for="campname">title</label>
+                    <input class="form-control" type="text" name="campnameinput" id="campname"
+                        value="<%= showCampground.name %> ">
+
+                </div>
+
+                <div>
+                    <label class="form-label" for="camplocation">location</label>
+                    <input class="form-control" type="text" name="camplocationinput" id="camplocation"
+                        value="<%=showCampground.location %> ">
+                </div>
+
+                <!--  -->
+                <div>
+                    <label class="form-label mt-3" for="campprice">Price</label></div>
+                <div class="input-group mb-3">
+
+                    <span class="input-group-text">$</span>
+                    <input type="number" id="campprice" class="form-control" name="campprice"
+                        value="<%=showCampground.price%>" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                </div>
+
+
+                <label for="camptextarea" class="form-label">Description</label>
+                <textarea class="form-control" id="camptextarea" rows="3"
+                    name="campdescription"> <%=showCampground.descripton%> </textarea>
+
+
+                <button class="btn btn-primary my-3">update</button>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs') %>
