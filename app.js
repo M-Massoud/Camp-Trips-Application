@@ -420,8 +420,10 @@ app.get('/admin', (req, res) => {
 
 ////////////////////////////////
 
-app.listen(3000, () => {
-    console.log(`iam listenning to port 3000 now`)
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`iam listenning to port ${port} now`)
 });
 
 
