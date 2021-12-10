@@ -24,7 +24,7 @@ const upload = multer({
 });
 
 
-const mbxGeocoding = require('@mapbox/mapbox-sdk/services/g');
+const mbxGeocoding = require('/mapbox-sdk/services/geocoding');
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({
     accessToken: mapBoxToken
