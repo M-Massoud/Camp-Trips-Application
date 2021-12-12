@@ -14,7 +14,15 @@ footer {
 
 .campground-img {
     height: 320px;
-
     width: 100%;
     max-width: auto;
+}
+
+@media screen and (max-width:768px) {
+    .campground-img {
+        height: auto;
+        max-height: 320px;
+        width: 100%;
+        max-width: auto;
+    }
 }
