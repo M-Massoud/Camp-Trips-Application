@@ -158,40 +158,38 @@
 
     <!-- end of the map  -->
 
-
-    <% for(let campground of campgrounds) { %>
-    <!-- 
+    <div class="row">
+        <% for(let campground of campgrounds) { %>
+        <!-- 
     <a href="http://localhost:3000/campgrounds/<%=campground._id  %> ">
         <li><%= campground.name %>
     </a> -->
 
-    <div class="d-inline-block col-sm-5.5 mx-3 my-3">
-        <div class="card">
-            <div class="card-body">
-                <% if ( !campground.image ) { %>
+        <div class="col-sm-6 my-3">
+            <div class="card">
+                <div class="card-body">
+                    <% if ( !campground.image ) { %>
 
-                <img src="../campplaceholderimg.jpg" class="card-img-top  img-thumbnail campground-img img-fluid"
-                    alt="camp-image">
-                <% } else { %>
+                    <img src="../campplaceholderimg.jpg" class="card-img-top  img-thumbnail campground-img img-fluid"
+                        alt="camp-image">
+                    <% } else { %>
 
 
-                <img src="<%= campground.image %>" class="card-img-top img-thumbnail campground-img img-fluid"
-                    alt="camp-image">
+                    <img src="<%= campground.image %>" class="card-img-top img-thumbnail campground-img img-fluid"
+                        alt="camp-image">
 
-                <%  } %>
-                <h5 class="card-title mt-2"><%= campground.name %></h5>
-                <p class="card-text"><%= campground.descripton %></p>
-                <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary d-block">View more details </a>
+                    <%  } %>
+                    <h5 class="card-title mt-2"><%= campground.name %></h5>
+                    <p class="card-text"><%= campground.descripton %></p>
+                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary d-block">View more details </a>
+                </div>
             </div>
         </div>
+
+
+
+        <%  } %>
     </div>
-
-
-
-
-
-    <%  } %>
-
     <!-- <a href="/newcamp">add new camp</a> -->
 </div>
 
